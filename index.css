@@ -1,0 +1,76 @@
+* {
+  display: 0px;
+}
+.row {
+  display: flex;
+  border: 2px solid rgb(151, 241, 152);
+  background-color: #90c092;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+h1 {
+  text-align: center;
+  background-color: #4caf50;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 300;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 44%;
+}
+
+.button1 {
+  background-color: #4caf50;
+}
+
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: small;
+}
+
+#content_img {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  float: left;
+  margin-right: 10px;
+}
+
+/* Child Text Container */
+#content_img div {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: red;
+  color: white;
+  margin-bottom: 5px;
+  font-family: sans-serif;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s, opacity 0.5s linear;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+#content_img:hover {
+  cursor: pointer;
+}
+
+#content_img:hover div {
+  width: 150px;
+  padding: 8px 15px;
+  visibility: visible;
+  opacity: 0.7;
+}

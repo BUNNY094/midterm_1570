@@ -1,9 +1,16 @@
-function myFunction() {
-  var txt;
-  if (confirm("Order Successful")) {
-    txt = "You pressed OK!";
-  } else {
-    txt = "You pressed Cancel!";
+var modal = document.querySelector(".modal");
+var btn = document.querySelector(".button");
+
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function () {
+  modal.style.display = "block";
+};
+span.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
-  document.getElementById("demo").innerHTML = txt;
-}
+};
